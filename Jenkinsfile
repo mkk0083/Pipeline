@@ -29,12 +29,6 @@ pipeline {
             echo 'Running more tests on Java 8'
           }
         }
-        stage('Test Blue Ocean') {
-          steps {
-            echo 'This is a test'
-            sleep 30
-          }
-        }
       }
     }
     stage('Deploy') {
