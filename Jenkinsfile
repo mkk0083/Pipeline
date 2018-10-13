@@ -32,6 +32,7 @@ pipeline {
         stage('Test Blue Ocean') {
           steps {
             echo 'This is a test'
+            sleep 30
           }
         }
       }
