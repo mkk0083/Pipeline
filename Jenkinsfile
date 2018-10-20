@@ -36,6 +36,7 @@ pipeline {
         branch 'master'
       }
       steps {
+        checkpoint 'Ready to Deploy'
         input(message: 'Is the build okay to deploy?', ok: 'Yes')
       }
     }
