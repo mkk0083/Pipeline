@@ -36,8 +36,11 @@ pipeline {
         branch 'master'
       }
       steps {
+        timeout(time:5, unit:'DAYS') {
         checkpoint 'Ready to Deploy'
         input(message: 'Is the build okay to deploy?', ok: 'Yes')
+      
+         }    
       }
     }
   }
