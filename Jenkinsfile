@@ -32,9 +32,6 @@ pipeline {
       }
     }
     stage('Deploy') {
-      when {
-        branch 'master'
-      }
       steps {
         timeout(time:25, unit:'SECONDS') {
         checkpoint 'Ready to Deploy'
