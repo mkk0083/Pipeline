@@ -33,6 +33,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
+        agent any
         timeout(time:25, unit:'SECONDS') {
         checkpoint 'Ready to Deploy'
         input(message: 'Is the build okay to deploy?', ok: 'Yes')
